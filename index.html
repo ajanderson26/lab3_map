@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scrollmap Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="stylesheet" href="./lib/scrollmap.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!--add scrollmap content here-->
+    <div class="content">
+        <!--title block, background image is title image-->
+        <div class="row" style="background-image:url(img/fullsizetitle.png)">
+            <div class="center title">
+                <!--title text-->
+                <h1>If Wes Anderson was a Basemap </h1>
+                <!--subtitle or author-->
+                <p class="author">Annika Anderson</p>
+            </div>
+            </div>
+        </div>
+        <!--first content block-->
+        <div class="row">
+            <div class="center">
+                <p>Take a look at my Mapbox Studio Basemap!</p>
+            </div>
+        </div>
+        <!--image block-->
+        <div class="row">
+            <div class="center">
+                <img class="fit" src="img/htmlspecsheet!.png">
+                <p>Inspiration for this map came from my favorite Wes Anderson movies Moonrise Kingdom and The Grand Budapest Hotel.</p>
+            </div>
+        </div>
+        <!--SLIDESHOW block-->
+        <div class="row">
+            <div class="center">
+                <p>Click through the images to see how the map changes at different zoom levels.</p>
+                <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!--indicator buttons at the bottom of the carousel that show the total number of slides-->
+                    <div class="carousel-indicators">
+                        <!--there should be as many of these buttons as there are slides in your carousel-->
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <!--images in the carousel-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slide1!.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide2!.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide3!.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide4!.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide5!.png" class="w-100" alt="...">
+                        </div>
+                    </div>
+                    <!--previous/next buttons that allow users to click from one slide to the next-->
+                    <button id="prev-button" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="next-button" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--image block-->
+        <div class="row">
+            <!--left aligned image-->
+            <div class="left">
+                <img class="fit" src="img/iconpic.png">
+            </div>
+            <!--right aligned caption-->
+            <div class="right">
+                <p class="vert-center">In this map, keys are used to signal Points of Interest and the Suitcase singals highway systems to further convey the Wes Anderson aesthetic.</p>
+            </div>
+        </div>
+         <!--image block-->
+         <div class="row">
+            <!--left aligned image-->
+            <div class="left">
+                <img class="fit" src="img/texture.png">
+            </div>
+            <!--right aligned caption-->
+            <div class="right">
+                <p class="vert-center"> Additionally, all water features have a grainy and scratchy texture which juxtaposes the actual texture of water.</p>
+            </div>
+        </div>
+        
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <img src="img/backg1.png" data-slide="0" class="fill vert-center">
+                <img src="img/backg2.png" data-slide="1" class="fill vert-center">
+                <img src="img/backg3.png" data-slide="2" class="fill vert-center">
+                <img src="img/backg4.png" data-slide="3" class="fill vert-center">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">Check out the map at different places and zoom levels! This is Madison, WI.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">Vatnajökull National Park, Iceland</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin"> New Dehli, India</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">Europe</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--mapbox iframe-->
+        <div class="row">
+            <div class="center-wide">
+                <p>Explore the whole map!</p>
+                <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/ajanderson26/cl9yx108p002o15r70hbmu73w.html?title=false&access_token=pk.eyJ1IjoiYWphbmRlcnNvbjI2IiwiYSI6ImNsOXl3dnIzdzAwNmszcW1yMmhrZjlsNHUifQ.XCys49mvEy12hmZV60I_9A&zoomwheel=false#6/43.82/-88.733" title="WesAnderson_basemap" style="border:none;"></iframe>
+            </div>
+        </div>
+    </div>
+    
+
+<script type="text/javascript" src="./lib/scrollmap.js"></script>
+<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+
+</body>
+</html>
